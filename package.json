@@ -4,8 +4,9 @@
   "description": "",
   "main": "app/index.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack -p"
+    "start": "npm run build && webpack-dev-server",
+    "build": "webpack",
+    "production": "webpack -p"
   },
   "repository": {
     "type": "git",
