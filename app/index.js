@@ -5,9 +5,7 @@ var GitHub = require('./github/github');
 var App = React.createClass({
   render: function() {
     return (
-      <div className="container">
-        <GitHub />
-      </div>
+      <GitHub />
     );
   }
 });
