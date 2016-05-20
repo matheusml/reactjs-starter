@@ -17,6 +17,12 @@
   },
   "homepage": "https://github.com/matheusml/reactjs-starter#readme",
   "dependencies": {
-    "react": "^15.0.2"
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.9.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-react": "^6.5.0"
   }
 }
