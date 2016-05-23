@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var GitHub = require('./github/github');
+var GitHub = require('./components/github/github');
 
 var App = React.createClass({
   render: function() {
