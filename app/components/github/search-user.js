@@ -11,6 +11,11 @@ var SearchUser = React.createClass({
       .then(function (response) {
         self.props.updateUserInfo(response.data);
       });
+
+    GitHubUserService.getReposByUsername(this.refs.username.value)
+      .then(function (response) {
+        self.props.updateUserRepos(response.data);
+      });
   },
 
   render: function () {

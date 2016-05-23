@@ -13,7 +13,7 @@ function UserInfo(props) {
           <p><a className="btn btn-default" href={props.user.html_url} role="button">View details</a></p>
         </div>
         <div className="col-lg-8">
-          <UserRepos />
+          <UserRepos repos={props.repos} />
         </div>
       </div>
     );
