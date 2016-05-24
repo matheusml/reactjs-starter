@@ -25,8 +25,13 @@ var SearchUser = React.createClass({
         <div className="row">
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
-              <label for="username">Username</label>
-              <input type="text" id="username" ref="username" className="form-control" placeholder="Ex: matheusml" />
+              <label>Username</label>
+              <input
+                type="text"
+                ref="username"
+                className="form-control"
+                placeholder="Ex: matheusml"
+              />
             </div>
             <button type="submit" className="btn btn-primary">Buscar</button>
           </form>
