@@ -5,17 +5,15 @@ var SearchUser = React.createClass({
   handleSubmit(e) {
     e.preventDefault();
 
-    var self = this;
-
     GitHubUserService.getByUsername(this.refs.username.value)
       .then(function (response) {
-        self.props.updateUserInfo(response.data);
-      });
+        this.props.updateUserInfo(response.data);
+      }.bind(this));
 
     GitHubUserService.getReposByUsername(this.refs.username.value)
       .then(function (response) {
-        self.props.updateUserRepos(response.data);
-      });
+        this.props.updateUserRepos(response.data);
+      }.bind(this));
   },
 
   render: function () {
