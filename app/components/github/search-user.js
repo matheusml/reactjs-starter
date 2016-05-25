@@ -29,7 +29,7 @@ var SearchUser = React.createClass({
                 ref="username"
                 className="form-control"
                 placeholder="Ex: matheusml"
-              />
+                />
             </div>
             <button type="submit" className="btn btn-primary">Buscar</button>
           </form>
@@ -38,5 +38,10 @@ var SearchUser = React.createClass({
     );
   }
 });
+
+SearchUser.propTypes = {
+  updateUserInfo: React.PropTypes.func,
+  updateUserRepos: React.PropTypes.func,
+};
 
 module.exports = SearchUser;

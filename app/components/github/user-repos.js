@@ -26,4 +26,8 @@ function UserRepos(props) {
   );
 }
 
+UserRepos.propTypes = {
+  repos: React.PropTypes.array,
+};
+
 module.exports = UserRepos;
