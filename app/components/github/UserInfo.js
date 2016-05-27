@@ -1,5 +1,5 @@
 var React = require('react');
-var UserRepos = require('./user-repos');
+var UserRepos = require('./UserRepos');
 
 function UserInfo(props) {
   var info = props && props.user ?

@@ -1,6 +1,6 @@
 var React = require('react');
-var SearchUser = require('./search-user');
-var UserInfo = require('./user-info');
+var SearchUser = require('./SearchUser');
+var UserInfo = require('./UserInfo');
 
 var GitHub = React.createClass({
   getInitialState: function() {
