@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + '/app/index.html',
@@ -5,8 +6,10 @@ var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: 'body'
 });
 
-webpack = {
+config = {
   entry: [
+    'webpack-dev-server/client?http://localhost:3000',
+    'webpack/hot/only-dev-server',
     './app/index.js'
   ],
   output: {
@@ -15,10 +18,10 @@ webpack = {
   },
   module: {
     loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"}
+      {test: /\.js$/, exclude: /node_modules/, loaders: ["react-hot", "babel-loader"]}
     ]
   },
-  plugins: [HTMLWebpackPluginConfig]
+  plugins: [new webpack.HotModuleReplacementPlugin(), HTMLWebpackPluginConfig]
 };
 
-module.exports = webpack;
+module.exports = config;
